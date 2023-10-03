@@ -7,6 +7,3 @@ def print_last_digit(number):
         return last_digit
     else:
         print("{:d}".format(last_digit),end="")
-
-a = print_last_digit(-1024)
-print(a)
