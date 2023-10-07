@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * reverse - reverse a likned list
  * @head: pointer to first node
