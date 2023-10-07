@@ -32,22 +32,21 @@ int is_palindrome(listint_t **head)
     listint_t *temp = *head;
     listint_t *link = *head;
     listint_t *rvs = NULL;
-    int flag = 1;
 
     if (!(*head) || !(*head)->next)
         return (1);
-    while (flag)
+    while (1)
     {
         temp = temp->next->next;
         if (temp == NULL)
         {
             rvs = link->next;
-            flag = 0;
+            break;
         }
         if (temp->next == NULL)
         {
             rvs = link->next->next;
-            flag = 0;
+            break;
         }
         link = link->next;
     }
