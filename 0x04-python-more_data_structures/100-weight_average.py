@@ -9,9 +9,7 @@ def weight_average(my_list=[]):
             mul *= i
         sum += mul
         mul = 1
-    print(sum)
     sum2 = 0
     for row in my_list:
         sum2 += row[-1]
-    print(sum2)
     return sum / sum2
