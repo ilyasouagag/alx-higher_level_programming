@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import math
-
 """magicclass calculate the area and circumferenece of a circle"""
+
+import math
 
 
 class MagicClass:
