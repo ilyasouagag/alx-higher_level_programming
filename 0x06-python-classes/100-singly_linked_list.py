@@ -16,24 +16,24 @@ class Node:
 
     @property
     def data(self):
-        """get data"""
+        """get data from linked list"""
         return self.__data
 
     @data.setter
     def data(self, value):
-        """set data"""
+        """set data to a linked list"""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
     @property
     def next_node(self):
-        """get next"""
+        """get next element of a node in linked list"""
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        """set next"""
+        """set next next elemnt of a node in linked list"""
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
@@ -43,11 +43,11 @@ class SinglyLinkedList:
     """create a sorted linked list"""
 
     def __init__(self):
-        """set head to none"""
+        """set head to none to begin with"""
         self.__head = None
 
     def sorted_insert(self, value):
-        """sort elements"""
+        """sort elements by data in increasing order"""
         new = Node(value)
         current = self.__head
         prev = None
@@ -66,7 +66,7 @@ class SinglyLinkedList:
                 prev.next_node = new
 
     def __str__(self):
-        """print elements of list"""
+        """print elements of list followed by a new line"""
         new_list = []
         current = self.__head
         while (current != None):
