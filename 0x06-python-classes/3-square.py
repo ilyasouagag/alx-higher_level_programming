@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""this is the third task of the project"""
+"""this is the fourth task of the project"""
 
 
 class Square:
