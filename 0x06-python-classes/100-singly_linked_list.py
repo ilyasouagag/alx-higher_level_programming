@@ -11,8 +11,8 @@ class Node:
             data (int): The data of the new Node.
             next_node (Node): The next node of the new Node.
         """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -49,19 +49,21 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         """sort elements by data in increasing order"""
         new = Node(value)
+        current = self.__head
+        prev = None
         if self.__head is None:
-            new.next_node = None
-            self.__head = new
-        elif self.__head.data > value:
-            new.next_node = self.__head
             self.__head = new
         else:
-            current = self.__head
-            while (current.next_node is not None and
-                    current.next_node.data < value):
+            while current is not None:
+                if value < current.data:
+                    break
+                prev = current
                 current = current.next_node
-            new.next_node = current.next_node
-            current.next_node = new
+            new.next_node = current
+            if prev is None:
+                self.__head = new
+            else:
+                prev.next_node = new
 
     def __str__(self):
         """print elements of list followed by a new line"""
