@@ -6,7 +6,11 @@ class Node:
     """create a node"""
 
     def __init__(self, data, next_node=None):
-        """attributes of node"""
+        """Initialize a new Node.
+        Args:
+            data (int): The data of the new Node.
+            next_node (Node): The next node of the new Node.
+        """
         self.__data = data
         self.__next_node = next_node
 
