@@ -51,16 +51,16 @@ class SinglyLinkedList:
         new = Node(value)
         current = self.__head
         prev = None
-        if self.__head == None:
+        if self.__head is None:
             self.__head = new
         else:
-            while (current != None):
+            while current is not None:
                 if value < current.data:
                     break
                 prev = current
                 current = current.next_node
             new.next_node = current
-            if prev == None:
+            if prev is None:
                 self.__head = new
             else:
                 prev.next_node = new
@@ -69,7 +69,7 @@ class SinglyLinkedList:
         """print elements of list followed by a new line"""
         new_list = []
         current = self.__head
-        while (current != None):
+        while current is not None:
             new_list.append(str(current.data))
             current = current.next_node
         return '\n'.join(new_list)
