@@ -1,0 +1,111 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation(10)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(0.75)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("    ilyas.")
+ilyas.
+<BLANKLINE>
+
+>>> text_indentation("ilyas.       ")
+ilyas.
+<BLANKLINE>
+
+>>> text_indentation("    ilyas.     ")
+ilyas.
+<BLANKLINE>
+
+>>> text_indentation("ilyas?")
+ilyas?
+<BLANKLINE>
+
+>>> text_indentation("       ilyas:  ")
+ilyas:
+<BLANKLINE>
+
+>>> text_indentation("    software engineering.    alx morocco.   ")
+software engineering.
+<BLANKLINE>
+alx morocco.
+<BLANKLINE>
+
+>>> text_indentation("              ")
+
+>>> text_indentation("alx projects, are so fun")
+alx projects, are so fun
+
+>>> text_indentation("ilyas: alaa")
+ilyas:
+<BLANKLINE>
+alaa
+
+>>> text_indentation("testing 2 blankline! Hi alx:\nilyas.")
+testing 2 blankline! Hi alx:
+<BLANKLINE>
+<BLANKLINE>
+ilyas.
+<BLANKLINE>
+
+>>> text_indentation("\n\n\n testing three new lines.")
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+testing three new lines.
+<BLANKLINE>
+
+>>> text_indentation("messi \n the GOAT.")
+messi
+the GOAT.
+<BLANKLINE>
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing "
+... "elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas "
+... "commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, "
+... "sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri "
+... "nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est "
+... "moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde "
+... "sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid "
+... "voles, postea. Quae animi affectio suum cuique tribuens atque hanc, "
+... "quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas "
+... "videres") # doctest: +NORMALIZE_WHITESPACE
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+Utrum igitur tibi litteram videor an totas paginas commovere?
+<BLANKLINE>
+Non autem hoc:
+<BLANKLINE>
+igitur ne illud quidem.
+<BLANKLINE>
+Fortasse id optimum, sed ubi illud:
+<BLANKLINE>
+Plus semper voluptatis?
+<BLANKLINE>
+Teneo, inquit, finem illi videri nihil dolere.
+<BLANKLINE>
+Transfer idem ad modestiam vel temperantiam, 
+quae est moderatio cupiditatum rationi oboediens.
+<BLANKLINE>
+Si id dicis, vicimus.
+<BLANKLINE>
+Inde sermone vario sex illa a Dipylo stadia confecimus.
+<BLANKLINE>
+Sin aliud quid voles, postea.
+<BLANKLINE>
+Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+<BLANKLINE>
+Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+>>> text_indentation({"messi": 1, "ronaldo": 2})
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
