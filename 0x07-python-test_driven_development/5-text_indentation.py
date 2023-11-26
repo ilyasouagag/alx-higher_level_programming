@@ -1,5 +1,5 @@
 def text_indentation(text):
-    if  not isinstance(text, str):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
     string = ""
     for i in text:
@@ -8,7 +8,7 @@ def text_indentation(text):
         if i == '\n':
             string = string.rstrip()
             print(string)
-            string=""
+            string = ""
         if i in ".?:":
             string = string.strip()
             print(string)
@@ -16,5 +16,5 @@ def text_indentation(text):
             string = ""
             alert = 1
     if alert == 0 and not all(n == ' ' for n in string):
-        string = string.strip() 
+        string = string.strip()
         print(string)
