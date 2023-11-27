@@ -37,10 +37,21 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
     def area(self):
         """function that calculates the area of rectangle"""
         return self.height * self.width
+
     def perimeter(self):
         """function that calculates the perimeter of rectangle"""
-        if  self.height == 0 or self.width == 0:
-            return 2 * (self.height +self.width)
+        if self.height == 0 or self.width == 0:
+            return 0
+        return 2 * (self.height + self.width)
+my_rectangle = Rectangle(2, 4)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
+print("--")
+
+my_rectangle.width = 10
+my_rectangle.height = 3
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
