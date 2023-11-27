@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """class rectangle that have height and width as attributes"""
 
 
