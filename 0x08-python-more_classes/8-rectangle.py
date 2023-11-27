@@ -74,6 +74,7 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """check whick instance have the bigger area and returns it"""
         if not isinstance(rect_1, Rectangle):
