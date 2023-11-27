@@ -66,6 +66,7 @@ class Rectangle:
         """create a representation of the rectangle"""
         rect = 'Rectangle('+str(self.width)+', '+str(self.height)+')'
         return rect
+
     def __del__(self):
         """when an instance is deleted, this message will be printed"""
         print("Bye rectangle...")
