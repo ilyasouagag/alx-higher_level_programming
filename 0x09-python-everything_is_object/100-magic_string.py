@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-a = (1, 2)
-b = (1, 2)
-print(a is b)
+def magic_string():
+    magic_string.iter = getattr(magic_string, 'count', -1) + 1
+    return 'BestSchool' + ', BestSchool' * magic_string.iter
