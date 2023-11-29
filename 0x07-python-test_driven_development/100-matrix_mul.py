@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def matrix_mul(m_a, m_b):
+    """function that multiplicate two matrix and return a new one"""
     m_c = []
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
