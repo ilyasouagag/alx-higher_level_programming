@@ -6,5 +6,5 @@ def add_attribute(obj, attr, value):
     """dict attribute is a dictionnary that stores
     the object's attributes"""
     if not hasattr(obj, '__dict__'):
-        raise TypeError("can't add a new attribute")
+        raise TypeError("can't add new attribute")
     setattr(obj, attr, value)
