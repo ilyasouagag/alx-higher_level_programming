@@ -1,20 +1,4 @@
 >>> BG = __import__("7-base_geometry").BaseGeometry
-
->>> m = __import__("7-base_geometry").__doc__
->>> len(m) > 1
-True
-
->>> c = __import__("7-base_geometry").BaseGeometry.__doc__
->>> len(c) > 1
-True
-
->>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
->>> len(mod1) > 1
-True
->>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
->>> len(mod2) > 1
-True
-
 >>> b = BG()
 >>> b.area()
 Traceback (most recent call last):
@@ -79,3 +63,17 @@ TypeError: BaseGeometry.integer_validator() missing 1 required positional argume
 >>> b.integer_validator("integer", 1, 2)
 Traceback (most recent call last):
 TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+>>> m = __import__("7-base_geometry").__doc__
+>>> len(m) > 1
+True
+
+>>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(c) > 1
+True
+
+>>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> len(mod1) > 1
+True
+>>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> len(mod2) > 1
+True
