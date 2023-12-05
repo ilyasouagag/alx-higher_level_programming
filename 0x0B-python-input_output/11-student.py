@@ -17,6 +17,7 @@ class Student:
                 all(type(ele) == str for ele in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
+
     def reload_from_json(self, json):
         for i, j in json.items():
             setattr(self, i, j)
