@@ -10,6 +10,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """create instances from base class"""
         if not id:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
