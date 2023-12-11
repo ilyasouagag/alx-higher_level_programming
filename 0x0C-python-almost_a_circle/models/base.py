@@ -47,7 +47,7 @@ class Base:
         """returns an instance with all attributes already set"""
         if dictionnary and dictionnary != {}:
             if cls.__name__ == "Rectangle":
-                instance = cls(1,1)
+                instance = cls(1, 1)
             else:
                 instance = cls(1)
             instance.update(**dictionnary)
