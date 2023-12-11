@@ -18,11 +18,11 @@ class Base:
             self.id = id
 
     @staticmethod
-    def to_json_string(list_dictionnaries):
+    def to_json_string(list_dictionaries):
         """returns the JSON string representation of list_dictionaries"""
-        if not list_dictionnaries or list_dictionnaries is None:
+        if not list_dictionaries or list_dictionaries is None:
             return "[]"
-        return json.dumps(list_dictionnaries)
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
