@@ -88,7 +88,11 @@ class Rectangle(Base):
 
     def __str__(self):
         """return a representation"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return (
+            f"[Rectangle] ({self.id}) "
+            f"{self.__x}/{self.__y, } - "
+            f"{self.__width}/{self.__height}"
+        )
 
     def update(self, *args, **kwargs):
         """update values by the ones given as parameters"""
@@ -119,4 +123,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """create dictionnary"""
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width}
