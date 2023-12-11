@@ -2,9 +2,11 @@
 import json
 import csv
 import turtle
+"""create the Base class"""
 
 
 class Base:
+    """class Baase that contain all methods"""
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -16,29 +18,32 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionnaries):
+        """returns the JSON string representation of list_dictionaries"""
         if not list_dictionnaries or list_dictionnaries is None:
             return "[]"
         return json.dumps(list_dictionnaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        list_dict = []
-        file_name = cls.__name__ + ".json"
-        with open(file_name, 'w') as file:
+        """class method save str to file"""
+        f = cls.__name__+".json"
+        with open(f, "w") as json_f:
             if not list_objs:
-                file.write("[]")
-            for a in list_objs:
-                list_dict.append(a.to_dictionary())
-            file.write(Base.to_json_string(list_dict))
+                json_f.write("[]")
+            else:
+                dicts = [num.to_dictionary() for num in list_objs]
+                json_f.write(Base.to_json_string(dicts))
 
     @staticmethod
     def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string"""
         if not json_string or json_string is None:
-            return "[]"
+            return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionnary):
+        """returns an instance with all attributes already set"""
         if dictionnary and dictionnary != {}:
             if cls.__name__ == "Rectangle":
                 instance = cls(10, 2, 3)
@@ -49,6 +54,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """returns a list of instances"""
         loaded = []
         file_name = cls.__name__ + ".json"
         try:
@@ -62,6 +68,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """serializes in CSV"""
         file_name = cls.__name__ + ".csv"
         with open(file_name, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
@@ -77,7 +84,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Return a list of classes instantiated from a CSV file."""
+        """deserializes in CSV"""
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as csvfile:
@@ -94,7 +101,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Draw Rectangles and Squares using the turtle module."""
+        """ opens a window and draws all the Rectangles and Squares"""
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)

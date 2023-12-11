@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-from rectangle import Rectangle
 """class Square"""
-
+from .rectangle import Rectangle
 
 class Square(Rectangle):
     """iherits from Rectangle"""
@@ -11,10 +10,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """getter for size"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """setter for size"""
         self.width = value
         self.height = value
 
@@ -24,8 +25,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """update the class"""
-        self.__init__(self.size, self.x, self.y)
         if args and len(args) != 0:
+            self.__init__(self.size, self.x, self.y)
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:
@@ -46,4 +47,5 @@ class Square(Rectangle):
                     self.y = b
 
     def to_dictionary(self):
+        """create dictionnary"""
         return {'id': self.id, 'x': self.x, 'size': self.height, 'y': self.y}
