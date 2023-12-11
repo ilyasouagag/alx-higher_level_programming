@@ -88,11 +88,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """return a representation"""
-        return (
-            f"[Rectangle] ({self.id}) "
-            f"{self.__x}/{self.__y, } - "
-            f"{self.__width}/{self.__height}"
-        )
+        return f"[Rectangle] ({self.id}) {self.x}/\
+{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """update values by the ones given as parameters"""
