@@ -3,7 +3,7 @@
 import MySQLdb
 from sys import argv
 if __name__ == "__main__":
-    db = MySQLdb.Connect(
+    db = MySQLdb.connect(
         host="localhost", user=argv[1],
         password=argv[2], database=argv[3], port="3306")
     cu = db.cursor()
