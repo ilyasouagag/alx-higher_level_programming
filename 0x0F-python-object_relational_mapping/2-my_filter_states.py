@@ -8,7 +8,7 @@ if __name__ == "__main__":
         passwd=argv[2], database=argv[3], port=3306)
     cu = db.cursor()
     cu.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY states.id", (argv[4],))
+        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id".format(argv[4]))
     rows = cu.fetchall()
     for row in rows:
         print(row)
