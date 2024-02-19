@@ -12,10 +12,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    alert = 0
-    for element in session.query(State).order_by(State.id):
-        if element.name == argv[4]:
-            print(element.id)
-            alert = 1
-    if alert == 0:
+    element = session.query(State).filter(State.name == (argv[4],))
+    try:
+        print(element[0].id)
+    except IndexError:
         print("Not found")
