@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""A script that
-- fetches https://alx-intranet.hbtn.io/status.
-- uses urlib package
+"""
+This Python script demonstrates how to fetch
+the content of a URL using the urllib.request
+module. The script makes a GET request to the
+URL "https://alx-intranet.hbtn.io/status" and
+prints information about the response.
 """
 if __name__ == '__main__':
     import urllib.request
@@ -9,5 +12,5 @@ if __name__ == '__main__':
         response = link.read()
         print("Body response:")
         print("\t- type: {}".format(type(response)))
-        print("\t- response: {}".format(response))
-        print("\t- utf8 response: {}".format(response.decode('utf-8')))
+        print("\t- content: {}".format(response))
+        print("\t- utf8 content: {}".format(response.decode('utf-8')))
